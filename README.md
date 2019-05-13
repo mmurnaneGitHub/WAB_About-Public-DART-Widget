@@ -5,4 +5,4 @@ Version 2.12
 
 INSTRUCTIONS:
 
-* Copy Widget.js to \widgets\About\Widget.js (Widget_org.js unminified version) 
+* Copy Widget.js to \widgets\About\Widget.js (Widget_org.js is unminified version) 

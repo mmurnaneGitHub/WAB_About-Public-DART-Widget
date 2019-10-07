@@ -77,6 +77,7 @@ define(['dojo/_base/declare',
         window.open('https://maps.google.com/?q=' + currentLatitude + ',' + currentLongitude + '&z=' + currentZoomLevel + '&layer=c&cbll=' + currentLatitude + ',' + currentLongitude + '&cbp=11,0,0,0,0');
       },
 
+      /*
       _getGovMeMap: function() {  //MJM
         var point = this.map.extent.getCenter();    //current map center point coordinates
         var outSR = new SpatialReference(2286);
@@ -89,6 +90,7 @@ define(['dojo/_base/declare',
        //IE 11 check
         //console.error(/rv:11/i.test(navigator.userAgent));  //rv 11 for IE 11
       },
+      */
 
       onOpen: function(){
         this.isOpen = true;
@@ -104,8 +106,9 @@ define(['dojo/_base/declare',
         html.empty(this.customContentNode);
 
         //MJM - Add GovME Map | Google Map links
-        //var aboutContent = html.toDom(this.config.about.aboutContent);
-        var mapLinks = "<div style='text-align: center;'><span id='Map1'></span> | <span id='Map2'></span><br>&nbsp;</div>";	
+        //var mapLinks = "<div style='text-align: center;'><span id='Map1'></span> | <span id='Map2'></span><br>&nbsp;</div>";	
+        //MJM - Add Google Map link for curent map extent
+        var mapLinks = "<div style='text-align: center;'><span id='Map1'></span><br>&nbsp;</div>";	
         var aboutContent = html.toDom(this.config.about.aboutContent + mapLinks);	
         //end MJM
 
@@ -148,8 +151,8 @@ define(['dojo/_base/declare',
           domConstruct.create("span", {innerHTML: "<span style='color: blue; text-decoration: underline; cursor: pointer;' title='Open Google Map @ current location'>Google Map</span>"}, dojo.byId("Map1"));	
           on(dojo.byId("Map1"), 'click', lang.hitch(this, this._getGoogleMap));	
           //govME Map - Map2	
-          domConstruct.create("span", {innerHTML: "<span style='color: blue; text-decoration: underline; cursor: pointer;' title='Open govME Map @ current location'>govME Map</span>"}, dojo.byId("Map2"));	
-          on(dojo.byId("Map2"), 'click', lang.hitch(this, this._getGovMeMap));	
+          //domConstruct.create("span", {innerHTML: "<span style='color: blue; text-decoration: underline; cursor: pointer;' title='Open govME Map @ current location'>govME Map</span>"}, dojo.byId("Map2"));	
+          //on(dojo.byId("Map2"), 'click', lang.hitch(this, this._getGovMeMap));	
           //end MJM	
       },
       _resizeImg: function(img) {

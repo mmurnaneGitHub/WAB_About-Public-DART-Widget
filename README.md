@@ -1,5 +1,5 @@
 ## WAB_About-Public-DART-Widget
-About Widget for Public DART Map (https://wspdsmap.cityoftacoma.org/website/DART/staff/TacomaPermitsMap.htm) and Permit Parking Calculator (https://wspdsmap.cityoftacoma.org/website/PW/ParkingCalculator2/) - Customization adds link for Google Maps using current map extent.
+About Widget for Public DART Map (https://wspdsmap.cityoftacoma.org/website/DART/staff/TacomaPermitsMap.htm), Tideflats Subarea Plan (https://wspdsmap.cityoftacoma.org/website/PDS/Tideflats/), and Permit Parking Calculator (https://wspdsmap.cityoftacoma.org/website/PW/ParkingCalculator2/) - Customization adds link for Google Maps using current map extent.
 
 Version 2.14
 
